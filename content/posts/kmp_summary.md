@@ -1,8 +1,8 @@
 ---
-title: "pd首页重构实践"
+title: "一文搞懂Kotlin跨平台概念"
 date: 2025-03-31
 draft: false
-tags: ["性能优化", "安卓"]
+tags: ["KMP", "安卓"]
 categories: ["技术"]
 ---
 

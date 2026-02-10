@@ -2,7 +2,7 @@
 title: "CLIP图像搜索实现与原理"
 date: 2024-06-24
 draft: false
-tags: ["二维码", "安卓"]
+tags: ["CLIP", "LLM"]
 categories: ["技术"]
 ---
 
