@@ -17,11 +17,11 @@ categories: ["技术"]
 ## 二、技术方案
 ### 1、架构图
 如下图所示，用户只需提交反馈相关信息，LLM模型会协助提取各字段，并基于 embeddings 将问题描述与历史问题、commit 信息进行匹配，最终自动化完成建bug单、流转、捞日志、在bug单回填预分析内容和日志链接。
-![图片](/images/3/Clipboard_Screenshot_1770701155.png.png)
+![图片](/images/3/Clipboard_Screenshot_1770701155.png)
 
 
 除此之外，我们还规划实现利用LLM对日志内容做预分析，对日志中常见的crash给到推荐的解决办法；对日志中的特定id，如xx id或xx id，事先查询得到对应xx的详细信息给到开发者参考。
-![图片](/api/images/3/db1051de-2d49-4521-8961-a211a279008d.png)
+![图片](/images/3/db1051de-2d49-4521-8961-a211a279008d.png)
 
-![图片](/api/images/3/4a3d1dd8-fab1-4653-bfc1-332d46607ad1.png)
+![图片](/images/3/4a3d1dd8-fab1-4653-bfc1-332d46607ad1.png)
 
