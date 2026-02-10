@@ -6,6 +6,8 @@ tags: ["日志工具", "内存优化"]
 categories: ["技术"]
 ---
 
+> Java IO 包提供有RandomAccessFile，但是经过测试读取性能较差。记录一下。
+
 RandomAccessFile 读取速度比较
 ### 零、背景
 
