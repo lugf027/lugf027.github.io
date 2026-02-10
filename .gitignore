@@ -1,0 +1,21 @@
+# Hugo 构建输出
+/public/
+/resources/_gen/
+
+# Hugo 模块
+/go.sum
+/go.mod
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Hugo 本地服务器
+hugo_stats.json

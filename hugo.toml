@@ -1,0 +1,67 @@
+baseURL = 'https://lugf027.github.io/'
+languageCode = 'zh-cn'
+title = 'lugf027 的博客'
+
+# 启用语法高亮
+pygmentsUseClasses = true
+
+[params]
+  # 网站描述
+  description = "分享技术、生活和思考"
+  # 作者信息
+  author = "lugf027"
+  # 社交链接
+  github = "lugf027"
+  # 显示阅读时间
+  readingTime = true
+  # 启用代码复制按钮
+  codeCopyButton = true
+  # 主题色
+  color = "linen"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 3
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 4
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Markdown 渲染配置
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# 输出配置
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+# 隐私配置
+[privacy]
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.youtube]
+    privacyEnhanced = true

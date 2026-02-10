@@ -1,0 +1,25 @@
+{{ define "main" }}
+<h1>{{ .Title | default "欢迎" }}</h1>
+
+{{ .Content }}
+
+<h2 style="margin-top: 2rem;">最新文章</h2>
+
+<ul class="post-list">
+    {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+    <li class="post-item">
+        <h3 class="post-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+        <div class="post-meta">
+            <time>{{ .Date.Format "2006-01-02" }}</time>
+        </div>
+        <p class="post-summary">{{ .Summary | truncate 100 }}</p>
+    </li>
+    {{ end }}
+</ul>
+
+<p style="margin-top: 1rem;">
+    <a href="{{ "/posts/" | relURL }}">查看全部文章 &rarr;</a>
+</p>
+{{ end }}

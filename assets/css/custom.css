@@ -1,0 +1,52 @@
+/* 自定义样式 */
+
+/* 代码块样式 */
+pre {
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* 文章标题样式 */
+.post-title {
+  font-weight: 700;
+}
+
+/* 标签样式 */
+.tags a {
+  background-color: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  margin-right: 4px;
+}
+
+.tags a:hover {
+  background-color: #e0e0e0;
+}
+
+/* 引用样式 */
+blockquote {
+  border-left: 4px solid #333;
+  padding-left: 1rem;
+  margin-left: 0;
+  font-style: italic;
+  color: #555;
+}
+
+/* 图片居中 */
+.post-content img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* 链接样式 */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}

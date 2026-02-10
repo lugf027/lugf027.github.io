@@ -1,0 +1,41 @@
+{{ define "main" }}
+<article>
+    <header>
+        <h1>{{ .Title }}</h1>
+        <div class="post-meta">
+            <time>{{ .Date.Format "2006-01-02" }}</time>
+            {{ if .Params.categories }}
+            · {{ range .Params.categories }}{{ . }}{{ end }}
+            {{ end }}
+            {{ if .ReadingTime }}
+            · 阅读约 {{ .ReadingTime }} 分钟
+            {{ end }}
+        </div>
+    </header>
+    
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+    
+    {{ with .Params.tags }}
+    <div class="tags" style="margin-top: 2rem;">
+        <strong>标签：</strong>
+        {{ range . }}
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+    
+    <nav style="margin-top: 2rem; display: flex; justify-content: space-between;">
+        {{ with .PrevInSection }}
+        <a href="{{ .Permalink }}">&larr; {{ .Title | truncate 30 }}</a>
+        {{ else }}
+        <span></span>
+        {{ end }}
+        
+        {{ with .NextInSection }}
+        <a href="{{ .Permalink }}">{{ .Title | truncate 30 }} &rarr;</a>
+        {{ end }}
+    </nav>
+</article>
+{{ end }}
