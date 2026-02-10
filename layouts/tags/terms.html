@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1>所有标签</h1>
+
+<div class="tags-list" style="margin-top: 1.5rem;">
+    {{ range .Data.Terms.Alphabetical }}
+    <a href="{{ .Page.Permalink }}" class="tag" style="display: inline-block; margin: 0.25rem;">
+        {{ .Page.Title }} <span style="color: #888;">({{ .Count }})</span>
+    </a>
+    {{ end }}
+</div>
+{{ end }}
