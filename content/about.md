@@ -24,7 +24,7 @@ draft: false
 
 - **主力**：Android / Java / Kotlin / 鸿蒙
 - **跨平台**：Kotlin Multiplatform
-- **探索**：LLM 应用开发
+- **探索**：LLM 应用开发、AI 提效
 
 ### ✨ 一些数字
 
