@@ -6,7 +6,7 @@ draft: false
 
 ## 👋 你好！
 
-我是 **lugf027**，腾讯终端开发工程师，目前在 [ima](https://ima.qq.com) 团队负责安卓、鸿蒙及 Kotlin 跨平台开发。
+我是 **[lugf027](http://luguangfeng.com/)**，腾讯终端开发工程师，目前在 [ima](https://ima.qq.com) 团队负责安卓、鸿蒙及 Kotlin 跨平台开发。
 
 ### 💼 主要经历
 
@@ -20,13 +20,15 @@ draft: false
 
 - **[武汉大学](https://www.whu.edu.cn/) - 软件工程** `2017.09 - 2021.06`
 
+    * 班长；校园奖学金/国家励志奖学金。
+
 ### 🛠️ 技术栈
 
 - **主力**：Android / Java / Kotlin / 鸿蒙
 - **跨平台**：Kotlin Multiplatform
 - **探索**：LLM 应用开发、AI 提效
 
-### ✨ 一些数字
+### ✨ 一些成果
 
 - 📜 13 项专利申请（11 篇独立完成，4篇LLM相关）
 - 📝 34 篇内部技术文章（2 篇头条、近 20 篇热榜）
