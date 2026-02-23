@@ -6,7 +6,7 @@ draft: false
 
 ## 👋 你好！
 
-我是 **[lugf027](http://luguangfeng.com/)**，腾讯终端开发工程师，目前在 [ima](https://ima.qq.com) 团队负责安卓、鸿蒙及 Kotlin 跨平台开发。
+我是 **[lugf027](http://luguangfeng.com/)**，腾讯终端开发工程师，目前在某 AI 产品团队负责安卓、鸿蒙及 Kotlin 跨平台开发。
 
 ### 💼 主要经历
 
