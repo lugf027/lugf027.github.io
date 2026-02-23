@@ -1,5 +1,5 @@
 ---
-title: " SweetPotato内存优化-RandomAccessFile 读取速度比较记录 "
+title: "日志工具内存优化-RandomAccessFile 读取速度比较记录"
 date: 2022-08-08
 draft: false
 tags: ["日志工具", "内存优化"]

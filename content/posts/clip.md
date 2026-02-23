@@ -99,7 +99,7 @@ def calculate_similarity_score(img1_path, img2_path):
 
 值得一提的是，这里最好不要直接使用OpenAI 开源的 CLIP 模型。因为 OpenAI CLIP训练用的图文数据是英语世界中的图像，这和中文世界中的图像有很大的数据分布差异，涉及到一些譬如成语、生活习俗、城市地点时可能会出现偏差较大的情况。
 
-这里笔者使用的是WXG的WeCLIP，这是WXG自行训练的一个通用的中文 CLIP 模型。具体可以参看这篇KM文章：[**WeCLIP**：图文预训练最强中文CLIP 模型](https://km.woa.com/articles/show/592047)。其使用起来也比较简单，如下即可分别将图像、文本数据转为向量数据。
+这里笔者使用的是一个中文 CLIP 模型。社区中有不少针对中文场景训练的 CLIP 模型可供选择，使用起来也比较简单，如下即可分别将图像、文本数据转为向量数据。
 
 ```
 import weclip
@@ -772,7 +772,6 @@ def forward(self, image, text):
 
 
 ## 参考引用
-- WeCLIP：图文预训练最强中文CLIP 模型[https://km.woa.com/articles/show/592047](https://km.woa.com/articles/show/592047)
 - 向量数据库[https://guangzhengli.com/blog/zh/vector-database/](https://guangzhengli.com/blog/zh/vector-database/)
 -  向量数据库技术鉴赏（上）[https://www.bilibili.com/video/BV11a4y1c7SW](https://www.bilibili.com/video/BV11a4y1c7SW)
 - 向量数据库技术鉴赏（下）[https://www.bilibili.com/video/BV1BM4y177Dk](https://www.bilibili.com/video/BV1BM4y177Dk)

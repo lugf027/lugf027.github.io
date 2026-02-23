@@ -35,17 +35,17 @@ categories: ["技术"]
     * 卡片大于10个时，轮播过程中偶现会闪
 - 期间主要涉及了以下工具、方案
     * 使用[perfetto](https://ui.perfetto.dev/)分析trace
-    * 使用司内APP自动化测试框架，以方便对相同用例重复测试、对比同一事件点性能变化情况
-    * 使用司内[PerfDogService](https://perfdog.qq.com)收集cpu、内存性能数据
-    * 使用司内raftkit收集帧率性能数据
+    * 使用内部APP自动化测试框架，以方便对相同用例重复测试、对比同一事件点性能变化情况
+    * 使用[PerfDogService](https://perfdog.qq.com)收集cpu、内存性能数据
+    * 使用内部帧率采集工具收集帧率性能数据
 
 最终的整体思路是更改`UI`加载、渲染的调度时机，在不影响整体视觉效果的前提下尽可能延迟加载、渲染，并使用公共的缓存池减少加载频次。另外梳理并优化`View`、`ViewModel`代码层次，便于以后的维护、拓展和问题定位。
 
 # 二、优化过程
 ## 1、FragmentAdapter 改为 AsyncListDifferDelegationAdapter
-现网对于每个卡片，使用了 `FragmentAdapter` 。虽然这样做便于管理生命周期，但导致每个卡片都是一个`Fragment`，增加了每个卡片的负担，并可能导致难以解决的crash，如[TransactionTooLargeException]( https://iwiki.woa.com/p/4007775071)需要专人分析。
+现网对于每个卡片，使用了 `FragmentAdapter` 。虽然这样做便于管理生命周期，但导致每个卡片都是一个`Fragment`，增加了每个卡片的负担，并可能导致难以解决的crash，如`TransactionTooLargeException`等需要专人分析。
 
-为了解决这个问题，我们将其更改为使用 `AsyncListDifferDelegationAdapter` 和普通的 `ViewHolder` 。通过在子线程中使用 `DiffUtil` 异步比较列表差异，我们能够更加高效地更新RecyclerView中的数据。DiffUtil了解更多见[DiffUtil 回调](https://km.woa.com/articles/show/582695)
+为了解决这个问题，我们将其更改为使用 `AsyncListDifferDelegationAdapter` 和普通的 `ViewHolder` 。通过在子线程中使用 `DiffUtil` 异步比较列表差异，我们能够更加高效地更新RecyclerView中的数据。
 
 ## 2、无限轮播方案
 在针对轮播场景的解决方案中，现网 `viewPager2`滚动方案如下：在 `adapter` 的 `getItemCount()` 方法中，返回实际数量的3倍；首次渲染时，将第 `count` 个元素作为首次展示的元素；在 `bindViewHolder` 时，对 `position` 进行3取余数操作。当滚动到 `count-1` 时，强制跳转到第 `count*2-1` 个元素；当滚动到 `2*count` 时，强制跳转到第 `count` 个元素。
