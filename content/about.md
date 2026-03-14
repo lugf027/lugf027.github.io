@@ -10,11 +10,11 @@ draft: false
 
 ### 💼 主要经历
 
-- **某 AI 产品 - 终端开发** `2025.04 - 至今`
+- **[ima.copilot](https://ima.qq.com/download) - 终端开发** `2025.04 - 至今`
 
     * 大模型知识库对话产品。
 
-- **某社区平台 - 安卓研发** `2021.07 - 2025.04`
+- **[腾讯频道](https://pd.qq.com/) - 安卓研发** `2021.07 - 2025.04`
 
     * 大型兴趣社区平台。
 
@@ -33,6 +33,7 @@ draft: false
 - 📜 10+项专利申请
 - 📝 30+篇内部技术文章
 - 👨‍🏫 多次担任项目 Owner、导师
+- 💻 开源库：[apng](https://klibs.io/project/lugf027/apng) - 高性能 APNG 解析渲染库（支持 Android/Kotlin Multiplatform）
 
 ### 📫 联系方式
 
